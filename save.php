@@ -14,7 +14,7 @@ $querying = "insert into users (username,email,password,cpassword,mobile) values
   if(mysql_query($querying))
 {
 echo "Registration successfully";
-header("location:login.php");	
+header("location:login.php/?registration=true");	
 }
 else
 {

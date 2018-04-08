@@ -27,6 +27,12 @@ header("Location:studentrecord.php");
 <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
+<?php
+if($_GET["registration"])
+
+	echo "Registration successfully"
+
+?>
 <form name="frmUser" method="post" action="">
 
 
