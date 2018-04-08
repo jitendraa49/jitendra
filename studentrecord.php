@@ -128,7 +128,7 @@ function valid(x)
 </script>
 <body>
 
-<form class="form-horiziontal" action="save.php" method="post" enctype="multipart/form-data" onsubmit="return valid(this)">
+<form class="form-horiziontal" action="saved.php" method="post" enctype="multipart/form-data" onsubmit="return valid(this)">
 
 <table class="tbl-form" border="2">
 <tr>

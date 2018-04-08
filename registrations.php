@@ -7,7 +7,7 @@
 
 </script>
 <body>
-<form class="form-horizontal" action="save.php" method="post" enctype="multipart/form-data" onsubmit="return valid(this)">
+<form class="form-horizontal" action="save.php" method="post">
 
 <table class="tbl-form" border="2">
 <tr>
@@ -17,7 +17,7 @@
 
 <tr class="srn">
 <td>Username</td>
-<td><input type="text" name="username" id="name"></td>
+<td><input type="text" name="username" id="username"></td>
 
 </tr>
 
@@ -38,9 +38,9 @@
 </tr>
 
 
-<tr class="srn">
+<tr>
 <td>Mobile</td>
-<td><input type="integer" name="username" id="name"></td>
+<td><input type="number" name="mobile" id="mobile"></td>
 
 </tr>
 <tr>

@@ -16,7 +16,7 @@ $message = "Invalid Username or Password!";
 }
 }
 if(isset($_SESSION["user_id"])) {
-header("Location:mysession.php");
+header("Location:studentrecord.php");
 }
 ?>
 

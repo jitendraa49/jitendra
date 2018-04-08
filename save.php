@@ -3,19 +3,17 @@ include("db.php");
 
 //print_r($_POST); die;
 $username= $_POST['username'];
-
 $email=$_POST['email'];
-$pass=$_POST['password'];
-$cpass=$_POST['cpassword'];
+$password=$_POST['password'];
+$cpassword=$_POST['cpassword'];
 $mobile=$_POST['mobile'];
 
 
 
-$querying = "insert into users (username,email,password,cpassword,mobile) values('$username','$email','$pass','$cpass','$mobile')"; 
+$querying = "insert into users (username,email,password,cpassword,mobile) values('$username','$email','$password','$cpassword','$mobile')"; 
   if(mysql_query($querying))
 {
-
-
+echo "Registration successfully";
 header("location:login.php");	
 }
 else
