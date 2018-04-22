@@ -1,28 +1,21 @@
-<?php
-session_start();
-//print_r($_SESSION); die;
-?>
+<?php 
+include("db.php");
+	 $sid=$_GET['stid'];
+	 $edtqury="select *from student_record where id=".$sid;
 
-<?php
-if(isset($_SESSION["user_name"])) {
+	 $rs1=mysql_query($edtqury);
+	 $rec1=mysql_fetch_array($rs1);
+print_r($rec1);
 ?>
- <?php echo "Welcome ". ucfirst($_SESSION["user_name"]); ?>. Click here to <a href="logout.php" title="Logout">Logout.</a>
-<?php
-}
-else{
-header("Location:login.php");
-}
-?>
-
-
-<html>
+<html>        
 <head>
+
 <title>Student Record</title>
-<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <script>
-/*
+
 function valid(x)
             {
 				
@@ -138,41 +131,45 @@ function valid(x)
                }
 
 }
-
-*/
-
-
 </script>
 <body>
-
-<form class="form-horiziontal" action="saved.php" method="post" enctype="multipart/form-data" onsubmit="return valid(this)">
-
+<form  class="form-horiziontal" action="update.php" method="post" enctype="multipart/form-data"onsubmit="return valid(this)">
 <table class="tbl-form" border="2">
 <tr>
 <td>Student Record</td>
 </tr>
+<input type="hidden" name="stdid" value="<?php echo $rec1['id']; ?>">
+
 
 <tr class="srn">
 <td>Image</td>
-<td><input type="file" name="image" id="image"></td>
+<?php if ($rec1['image']!=''){ ?>
+
+<td><img src="images/<?php echo $rec1['image']; ?>" height="100px" width="100px">
+			 <a href="remove.php?id=<?php echo $sid; ?>&myfile=<?php echo $rec1["image"]?>">Remove Photo</a>
+</td>
+<?php }else{ ?>
+	<td><input type="file" name="image" id="image"></td>
+
+<?php } ?>
 </tr>
 
 
 <tr class="srn">
 <td>Name</td>
-<td><input type="text" name="name" id="name"></td>
+<td><input type="text" name="name" id="name" value="<?php echo $rec1['name']; ?>"></td>
 
 </tr>
 
 
 <tr class="srn">
-<td>Lname</td>
-<td><input type="text" name="lname" id="lname"></td>
+<td>Fname</td>
+<td><input type="text" name="fname" id="fname"value="<?php echo $rec1['fname']; ?>"></td>
 </tr>
 
 <tr>
 <td>Age</td>
-<td><input type="number" name="age" id="age"></td>
+<td><input type="number" name="age" id="age"value="<?php echo $rec1['age']; ?>"></td>
 </tr>
 
 <tr>
@@ -180,39 +177,44 @@ function valid(x)
 <td><input type="email" name="email" id="email"></td>
 </tr>
 
-<tr class="srn">
-<td>Userid</td>
-<td><input type="integer" name="userid" id="userid"></td>
-
-</tr>
-
-
 <tr>
 <td>Password</td>
-<td><input type="password" name="password" id="password"></td>
+<td><input type="password" name="password" id="password"value="<?php echo $rec1['password']; ?>>"</td>
 </tr>
-
 
 
 <tr>
 <td>Gender</td>
-<td><input type="radio" name="gender" id="gender" value="male">Male
-<input type="radio" name="gender" id="gender" value="Female">Female
+<td><input type="radio" name="gender" id="gender" value="male" <?php if($rec1['gender']=='male'){ echo "checked"; }?>>Male
+<input type="radio" name="gen" id="gender" value="Female" <?php if($rec1['gender']=='Female'){ echo "checked"; }?>>Female
 </td>
 </tr>
 
+
+
+
+
 <tr>
 <td>Course</td>
-<td><input type="checkbox" name="chk[]" id="chk" value="PHP">PHP
-<input type="checkbox" name="chk[]" id="chk" value="JAVA">JAVA
+<?php $courses = explode(",",$rec1['course']);
+
+print_r($courses);
+ ?>
+<td><input type="checkbox" name="chk[]" id="chk" value="PHP"<?php if(in_array("PHP",$courses)){echo "checked";}?>>PHP
+<input type="checkbox" name="chk[]" id="chk" value="JAVA" <?php if(in_array("JAVA",$courses)){echo "checked";}?>>JAVA
+
 </td>
 </tr>
+
+
+
+
 
 <tr>
 <td>City</td>
 <td>
 <select name="city">
-<option value="0">--Select--</option>
+<option value="<?php echo $rec1['city']; ?>"><?php echo $rec1['city']; ?></option>
 <option value="India">India</option>
 <option value="Australia">Australia</option>
 <option value="Japan">Japan</option>
@@ -223,7 +225,7 @@ function valid(x)
 
 <tr>
 <td>Address</td>
-<td><textarea name="address"></textarea></td>
+<td><textarea name="address"><?php echo $rec1['address']; ?></textarea></td>
 </tr>
 
 <tr>

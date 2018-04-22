@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 if(count($_POST)>0) {
 		$conn = mysql_connect("localhost","root","");
@@ -28,9 +28,10 @@ header("Location:studentrecord.php");
 </head>
 <body>
 <?php
-if($_GET["registration"])
+if(isset($_GET["registration"])){
 
-	echo "Registration successfully"
+	echo "Registration successfully";
+}
 
 ?>
 <form name="frmUser" method="post" action="">

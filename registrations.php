@@ -1,46 +1,35 @@
 <html>
 <head>
-<title>Registrations </title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<head>
-<script>
+<title>Registrations</title>
+</head>
 
-</script>
 <body>
-<form class="form-horizontal" action="save.php" method="post">
+<h1>Create a new Account </h1>
+<p1>Its free always</p1>
+<form class="form-horiziontal" action="save.php" method="post">
 
 <table class="tbl-form" border="2">
-<tr>
-<td>Registration</td>
-</tr>
 
 
-<tr class="srn">
-<td>Username</td>
-<td><input type="text" name="username" id="username"></td>
 
-</tr>
-
-<tr>
-<td>Password</td>
-<td><input type="password" name="password" id="password"></td>
-</tr>
-
-<tr>
-<td>CPassword</td>
-<td><input type="password" name="cpassword" id="cpassword"></td>
-</tr>
+<div class="placeholder" aria-hidden="true">Username</div>
+<input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="username" aria-required="1" placeholder="" aria-label="username" id="u_0_u">
 
 
-<tr>
-<td>Email</td>
-<td><input type="email" name="email" id="email"></td>
-</tr>
+
+<div class="placeholder" aria-hidden="true"> Email address</div>
+<input type="email" class="inputtext _58mg _5dba _2ph-" data-type="email" name="email" aria-required="1" placeholder="" aria-label="Email" id="u_0_u">
+
+<div class="placeholder" aria-hidden="true"> Mobile Number</div>
+<input type="number" class="inputtext _58mg _5dba _2ph-" data-type="number" name="mobile" aria-required="1" placeholder="" aria-label="mobile" id="u_0_u">
 
 
-<tr>
-<td>Mobile</td>
-<td><input type="number" name="mobile" id="mobile"></td>
+<div class="placeholder" aria-hidden="true">New password</div>
+<input type="password" class="inputtext _58mg _5dba _2ph-" data-type="password" autocomplete="password" name="password" aria-required="1" placeholder="" aria-label="password" id="u_0_16" aria-describedby="js_o6" aria-invalid="true">
+
+<div class="placeholder" aria-hidden="true">Cpassword</div>
+<input type="password" class="inputtext _58mg _5dba _2ph-" data-type="password" autocomplete="cpassword" name="cpassword" aria-required="1" placeholder="" aria-label="cpassword" id="u_0_16" aria-describedby="js_o6" aria-invalid="true">
+
 
 </tr>
 <tr>
@@ -48,7 +37,5 @@
 </tr>
 
 
-</table>
-</form>
 </body>
 </html>

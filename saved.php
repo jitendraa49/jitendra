@@ -3,26 +3,24 @@ include("db.php");
 
 //print_r($_POST); die;
 $name= $_POST['name'];
-$fname=$_POST['fname'];
+$lname=$_POST['lname'];
 $age=$_POST['age'];
 $email=$_POST['email'];
-$pass=$_POST['password'];
-$cpass=$_POST['cpassword'];
-$gender= $_POST['gen'];
+$password=$_POST['password'];
+
+$gender= $_POST['gender'];
 $course= $_POST['chk'];
 $cou= implode(",",$course);
 $city= $_POST['city'];
-$add= $_POST['address'];
-$username= $_POST['username'];
+$address= $_POST['address'];
 
-$querying = "insert into student_record (name,fname,age,email,password,cpassword,gender,course,city,address,username) values('$name','$fname','$age','$email','$pass','$cpass','$gender','$cou','$city','$add','username')"; 
+
+$querying = "insert into student_record (name,lname,age,email,password,gender,course,city,address,username) values('$name','$lname','$age','$email','$password','$gender','$cou','$city','$address',)"; 
   if(mysql_query($querying))
 {
 
 
-include ("image.php");
-header("location:view.php");
-	
+header("location:view.php");	
 }
 else
 {
@@ -30,5 +28,6 @@ else
  echo "error occured"; 
 
 }
+
 
 ?>
