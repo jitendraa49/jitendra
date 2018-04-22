@@ -8,7 +8,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   header("location: login.php");
   exit;
 }
-$username = $_SESSION['username']);
+$username = $_SESSION['username'];
 $querying = "insert into student_record (name,lname,age,email,password,gender,course,city,address,username) values('$name','$lname','$age','$email','$password','$gender','$cou','$city','$address','$username')";
 //print_r($_POST); die;
 

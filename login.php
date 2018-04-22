@@ -1,21 +1,17 @@
 <?php 
+include("db.php");
 session_start();
 if(count($_POST)>0) {
-		$conn = mysql_connect("localhost","root","");
-		mysql_select_db("studentform");
 		$qry="SELECT * FROM users WHERE username='" . $_POST["user_name"] . "' and password = '". $_POST["password"]."'";
 		$result = mysql_query($qry);
 		$row  = mysql_fetch_array($result);
-
 if(is_array($row)) {
-$_SESSION["user_id"] = $row['id'];
 $_SESSION["username"] = $row['username'];
-
 }else {	
 $message = "Invalid Username or Password!";
 }
 }
-if(isset($_SESSION["user_id"])) {
+if(isset($_SESSION["username"])) {
 header("Location:studentrecord.php");
 }
 ?>
