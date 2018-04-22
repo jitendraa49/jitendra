@@ -1,6 +1,11 @@
 <?php
+// Initialize the session
 session_start();
-unset($_SESSION["user_id"]);
-unset($_SESSION["user_name"]);
+ 
+// Unset all of the session variables
+$_SESSION = array();
+ 
+// Destroy the session.
+session_destroy();
 header("Location:mysession.php");
 ?>

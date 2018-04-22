@@ -1,6 +1,17 @@
 <?php 
 include("db.php");
-$qry="select *from student_record order by id asc ";
+
+session_start();
+ 
+// If session variable is not set it will redirect to login page
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: login.php");
+  exit;
+}
+$username = $_SESSION['username']);
+$qry="select *from student_record where username = '$username' order by id asc ";
+//print_r($_POST); die;
+
 $rs= mysql_query($qry);
 ?>
 

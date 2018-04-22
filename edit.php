@@ -164,7 +164,7 @@ function valid(x)
 
 <tr class="srn">
 <td>Fname</td>
-<td><input type="text" name="fname" id="fname"value="<?php echo $rec1['fname']; ?>"></td>
+<td><input type="text" name="lname" id="lname"value="<?php echo $rec1['fname']; ?>"></td>
 </tr>
 
 <tr>

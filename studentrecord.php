@@ -180,11 +180,7 @@ function valid(x)
 <td><input type="email" name="email" id="email"></td>
 </tr>
 
-<tr class="srn">
-<td>Userid</td>
-<td><input type="integer" name="userid" id="userid"></td>
 
-</tr>
 
 
 <tr>

@@ -9,8 +9,8 @@ if(count($_POST)>0) {
 
 if(is_array($row)) {
 $_SESSION["user_id"] = $row['id'];
-$_SESSION["user_name"] = $row['username'];
-$_SESSION["pass"] = $row['password'];
+$_SESSION["username"] = $row['username'];
+
 }else {	
 $message = "Invalid Username or Password!";
 }

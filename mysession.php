@@ -4,9 +4,9 @@ session_start();
 ?>
 
 <?php
-if(isset($_SESSION["user_name"])) {
+if(isset($_SESSION["username"])) {
 ?>
- <?php echo "Welcome ". ucfirst($_SESSION["user_name"]); ?>. Click here to <a href="logout.php" title="Logout">Logout.</a>
+ <?php echo "Welcome ". ucfirst($_SESSION["username"]); ?>. Click here to <a href="logout.php" title="Logout">Logout.</a>
 <?php
 }
 else{
