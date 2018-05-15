@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("fonts.css");
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+
+@media (max-width: 1599px) {
+
+}
+
+@media (max-width: 1200px) {
+.intro-section .carousel-caption{ top:15%;}
+.intro-section .carousel-caption h1 {
+    font-size: 50px;
+    line-height: 40px;
+}
+.f-block .col-md-10{ width:80.333%}
+.f-block h3{ font-size:24px;}
+}
+
+@media (max-width: 992px) {
+.intro-section .three-blocks{ position:static; margin-top:30px}
+.slide-mobile {
+    bottom: 0;
+    width: 65%;
+}
+.blue-box{ text-align:center}
+.blue-box img{ margin-top:0}
+.blue-box .col-md-4{min-height:95px}
+.about-section hgroup h2 br{ display:none}
+.f-block h3{ font-size:18px;}
+.f-block .col-md-10{ width:73.667%; padding:0 5px}
+.f-block{ margin:20px 0; border-bottom:1px solid #f6f6f6}
+.f-block:last-child{ border-bottom:none}
+.f-block p{ font-size:14px}
+}
+
+/* Collapse oversized image and pulled images after iPad breakpoint. */
+@media (max-width: 767px) {
+.navbar{top: 45px;}
+.navbar.top-nav-collapse { top:0;}
+.navbar-toggle .icon-bar{ background:#fff}
+.navbar-toggle{ background:#046da3}
+.navbar-collapse{ background:rgba(0,0,0,0.8)}
+.navbar-nav > li > a{ padding-top:10px}
+header .social li{ padding-left:2px; padding-right:2px}
+.intro-section .carousel-caption h1 br{ display:none}
+.intro-section .carousel-caption h1{ font-size:30px; line-height:20px;}
+.intro-section .carousel-caption h6 { font-size: 18px;}
+.slide-mobile { left:auto; right:10px}
+.blue-box{ margin-bottom:20px}
+.blue-box .col-md-4{ float:left}
+.features-section .f-block img{ float:left !important}
+.f-block{ padding-bottom:20px;}
+.f-block .col-md-10{ text-align:left; padding-left:20px; float:left}
+
+}
+
+@media (max-width: 643px) {
+.intro-section .carousel-caption .text-left br{ display:none}
+.intro-section .carousel-caption .text-left a img{ display: block;
+    margin-top: 10px;
+    width: 30%;}
+.slide-mobile { width:58%;
+    left: auto;
+    max-width: 100%;
+    right: 0;
+    text-align: right;
+}
+.intro-section .carousel-caption h1 {
+    font-size: 20px;font-family: 'kabeld';
+}
+h2{ font-size:24px}
+.about-section h3{ font-size:20px;}
+.site-info .pull-right{ font-size:10px}
+}
+
+@media (max-width: 480px) {
+
+}
+
+/* Mobile devices */
+@media (max-width: 359px) {
+header .col-xs-9, header .col-xs-3{ float:none; width:auto; }
+header .list-inline{text-align:center}
+header .list-inline.social{ margin-top:5px}
+.navbar {top: 65px;}
+.top-nav-collapse { top:0;}
+.slide-mobile { display:none}
+.intro-section .carousel-caption .text-left a img{ display: inline-block; width:36%; margin-top:0}
+.blue-box h3{ font-size:24px}
+.abt-block{ text-align:center}
+.abt-block img{ float:none !important; margin-right:0}
+#testimonials .carousel-inner .item .carousel-caption{ font-size:18px; line-height:28px;}
+footer nav li::after{ margin-left:3px;}
+footer nav .list-inline > li{ padding-right:0;}
+.site-info .pull-right{ float:none !important; color:#046da3; width:100%; clear:both; padding-top:0; padding-bottom:5px; text-align:center; font-size:11px;}
+.site-info .pull-right a{color:#046da3;}
+}
+/**
+ * 9.0 Print
+ * ----------------------------------------------------------------------------
+ */
+
+/* Retina-specific styles. */
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+
+}
+
+@media print {
+
+}

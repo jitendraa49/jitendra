@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+
+/**** RESET CSS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------****/
+* {	magin:0;
+	padding:0;
+	-webkit-box-sizing:  border-box;
+	-moz-box-sizing:  border-box;
+	box-sizing:  border-box;
+}
+
+html, body, table, th, td, tr, tbody, thead, thead, tfoot, dl, dt, dd, div, em, strong, b, i, sub, sup, ul, ol, li, span, applet, object, iframe, pre, blockquote, a, abbr, acronym, address, big, small, cite, code, del, dfn, font, ins, kbd, q, s, samp, strike, fieldset, form, label, legend, caption, main, section, header, footer, aside, hgroup {
+	font-style:normal;
+	font-weight:normal;
+	font-family:inherit;
+	font-size:inherit;
+	text-decoration:none;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+::-webkit-input-placeholder {
+   color: #ccc;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ccc;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccc;  
+}
+
+:-ms-input-placeholder {  
+   color: #ccc;  
+}
+
+textarea {
+ resize:none;
+}
+
+img {
+	max-width:100%;
+	vertical-align:bottom;
+	border:none
+}
+body{font-family: 'Lato', sans-serif; font-weight:400; font-size:15px; color:#323232;background:#fff; border-top:3px solid #ffcc29}
+strong, b{ font-weight:700}
+
+
+/**** RESET CLASSES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------****/
+main:after, .wrapper:after, footer:after, header:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+a{color:#21b354;text-decoration:none}
+a:focus, a:active,a:hover{outline:none;text-decoration:none; color:#ffcc29}
+/**** FONT SIZE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------****/
+.f-size11{ font-size:11px;}
+.f-size16{ font-size:16px;}
+.f-size18{ font-size:18px;}
+
+/**** PADDINGS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------****/
+/*Padding Left*/
+.p-left10{ padding-left:10px}
+
+/*Padding Right*/
+.p-right10{ padding-right:10px}
+
+/*Padding Top*/
+.p-top10{ padding-top:10px}
+.p-top30{ padding-top:30px}
+/*Padding Bottom*/
+.p-bottom10{ padding-bottom:10px}
+.p-bottom50{ padding-bottom:50px}
+
+.p-tb50{ padding-top:50px;padding-bottom:50px}
+
+/**** MARGINS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------****/
+/*Margin Left*/
+.m-left10{ margin-left:10px}
+
+/*Margin Right*/
+.m-right10{ margin-right:10px;}
+
+/*Margin Top*/
+.m-top10{ margin-top:10px}
+.m-top15{ margin-top:15px}
+.m-top20{ margin-top:20px}
+.m-top30{ margin-top:30px}
+.m-top50{ margin-top:50px}
+
+/*Margin Bottom*/
+.m-bottom50{ margin-bottom:50px}
+
+.m-tb50{ margin-top:50px; margin-bottom:50px}
+.m-all0{ margin:0}
