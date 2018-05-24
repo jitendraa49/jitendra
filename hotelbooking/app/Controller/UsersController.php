@@ -1,6 +1,7 @@
 <?php
 class UsersController extends AppController {
 	
+	
 	function beforeFilter() {
 
 		parent::beforeFilter();
@@ -55,8 +56,7 @@ class UsersController extends AppController {
 			
 
 	}
-	
-	
+		
 
 
 }

@@ -7,7 +7,56 @@ public function admin_index() {
  
 
 	}
+	
+		public function admin_categoryexport() 
+	{
+	$this->loadModel('Slider');
+	if($this->request->data['supportive']=='Export to CSV')
+	{
+		$cat = $this->Slider->find('all',array('order'=>array('Slider.id'=>'desc')));
+		$colNames = array_keys($this->Slider->getColumnTypes());
+		
+		$output="";
+		for ($i = 0; $i < count($colNames); $i++) {
+		$heading = $colNames[$i];
+		$output .= '"'.$heading.'",';
+		}
+		$output .="\n";
+		$output="";
+		$output .= '"id",';
+		$output .= '"name",';
+		$output .= '"image",';
+		$output .="\n";	
+		
+		foreach($cat as $pro){
+		//pr($pro); die;
+		$output .=$pro["Slider"]["id"].",";
+		$output .=$pro["Slider"]["name"].",";
+		$output .=$pro["Slider"]["image"].",";
+		$output .="\n";
+		}	
+	}
+	$filename = "slider.csv";
+	header('Content-type: application/csv');
+	header('Content-Disposition: attachment; filename='.$filename);
+	echo $output;
+	die;
+	}
+	
+	public function admin_search() {
+			$this->loadModel('Slider');
+			$name= $this->request->data['Searchpro']['name'];
+			$prr=array();
 
+			if(!empty($name))
+			{
+				$use=array('Slider.name LIKE'=>'%'.trim($name).'%');
+				$prr[]=$use;
+			}
+			
+$sli= $this->Slider->find('all',array('conditions'=>array($prr)));
+			$this->set('slider',$sli);
+	}
 	
 	public function admin_add() {
 		$this->loadModel('Slider');

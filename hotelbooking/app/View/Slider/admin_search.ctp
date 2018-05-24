@@ -1,55 +1,3 @@
-	<script src="<?php echo $this->webroot; ?>js/admin/all_home.js"></script>
- 	    <?php echo $this->Form->create('Category',array('url' => array('controller' => 'slider', 'action' => 'categoryexport'), 'inputDefaults'=>array('div'=>false,'label'=>false),'class'=>'stdform')); ?> 
-	    <div class="maincontent noright">
-        	<div class="maincontentinner">
-            	
-            	<?php include_once('admin_menus.ctp'); ?>
-                <!--maintabmenu-->
-                
-                <div class="content">
-                
-                <?php echo $this->Session->flash(); ?>
-                <div class="contenttitle radiusbottom0">
-                	<h2 class="table"><span>Slider Manager</span></h2>
-                </div><!--contenttitle-->
-                <div class="tableoptions">
-                 <div class="section_leftboxes">
-   <input type="submit" class="radius3" id="search" name="supportive" value="Export to CSV" >
-   
-       </div>
-       <div class="section_rightbox">    
-            <?php echo $this->Form->end();?>
-            
-        </div>
-				<br>
-				<?php
-$data = $this->Js->get('#SearchproAdminIndexForm')->serializeForm(array('isForm' => true, 'inline' => true));
-$this->Js->get('#SearchproAdminIndexForm')->event('keyup',
-$this->Js->request(array('action' => 'search', 'controller' => 'slider'),
-array(
-'update' => '#prosrrc',
-'data' => $data,
-'async' => true,   
-'dataExpression'=>true,
-'method' => 'POST'
-)));
-echo $this->Js->writeBuffer();
-?>
-
-				
-<?php  echo $this->Form->create('Searchpro',array('inputDefaults'=>array('div'=>false,'label'=>false),'class'=>'stdform'));?>
-		
-        <?php echo $this->Form->input('name', array('class' => 'smallselect','type'=>'text','placeholder'=>'Name','style'=>'margin: 6px 7px 9px 0; width: 20%;'));
-?>
-   <?php echo $this->Form->input('desc', array('class' => 'smallselect','type'=>'text','placeholder'=>'dsec','style'=>'margin: 6px 7px 9px 0; width: 20%;'));
-?>
-        
-        <?php echo $this->Form->end(); ?>
-               </div><!--tableoptions-->
-
-                <div class="dataTables_wrapper" id="dyntable_wrapper">	
-				                <div id='prosrrc'>
-
  <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablecb" id="dyntablzze">
                 
                     <colgroup>
@@ -115,17 +63,3 @@ top: 0px;">
 
                     </tbody>
                 </table>
-                </div>
-               
-                <?php //echo $this->element('admin/pagination'); ?>
-                                </div>
-
-               
-                <br clear="all" />
-                    
-             </div>  <!--content-->
-                
-            </div><!--maincontentinner-->
-            <?php echo $this->Form->end();?>
-            
-            

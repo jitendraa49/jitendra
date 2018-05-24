@@ -2,6 +2,7 @@
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center">
+          <?php echo $this->Session->flash(); ?>
             <h1 class="heading" data-aos="fade-up">Contact</h1>
             <p class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100">Get in touch with us.</p>
           </div>
@@ -14,25 +15,27 @@
     
     <section class="section bg-primary contact-section">
       <div class="container">
+      
         <div class="row">
+        
           <div class="col-md-7">
             
             <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5" style="margin-top: -150px;">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
+                  <input name="name" type="text" id="name" class="form-control ">
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control ">
+                  <input name="phone" type="text" id="phone" class="form-control ">
                 </div>
               </div>
           
               <div class="row">
                 <div class="col-md-12 form-group">
                   <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control ">
+                  <input name="email" type="email" id="email" class="form-control ">
                 </div>
               </div>
               <div class="row">

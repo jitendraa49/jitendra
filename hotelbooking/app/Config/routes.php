@@ -31,6 +31,9 @@
  */
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login','admin'=>true));
 	Router::connect('/contact', array('controller' => 'home', 'action' => 'contact'));
+	Router::connect('/blog', array('controller' => 'home', 'action' => 'blog'));
+	Router::connect('/about', array('controller' => 'home', 'action' => 'about'));
+	Router::connect('/hotel', array('controller' => 'home', 'action' => 'hotel'));
 
 
 /**

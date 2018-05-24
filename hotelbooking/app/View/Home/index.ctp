@@ -20,64 +20,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right">
-            <a href="restaurant.html"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Food &amp; Wines</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
+		<div class="row">
+		<?php foreach($category as $value) { //pr($value);?>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+		
+           
+             <div class="category-item">
+                <img src="<?php echo SITE_URL; ?>/images/banner/<?php echo $value['Category']['image']; ?>" alt="Image placeholder" class="img-fluid">
+				
+				
+              <p><em><?php echo $value['Category']['name']; ?></em></p>
+              
             </div>
-            <span class="reviews-count float-right">
-              3,239 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="100">
-            <a href="restaurant.html"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Resort &amp; Spa</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              4,921 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="200">
-            <a href="hotel.html"><img src="img/img_4.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="hotel.html">Hotel Rooms</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              2,112 reviews
-            </span>
-          </div>
-          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
-            <a href="yacht.html"><img src="img/img_5.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="yacht.html">Yacht Club</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              6,421 reviews
-            </span>
-          </div>
-        </div>
-      </div>
+              </div>
+			  
+			  <?php  } ?>
     </section>
     <!-- END section -->
 
@@ -119,12 +76,24 @@
           </div>
         </div>
         <div class="row">
+		<?php foreach($blog as $value) { //pr($value);?>
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
-<?php foreach($blog as $value) { //pr($value);?>
+		
            
              <div class="blog-item">
                 <img src="<?php echo SITE_URL; ?>/images/banner/<?php echo $value['Blog']['image']; ?>" alt="Image placeholder" class="img-fluid">
+				
+				<blockquote>
+
+                <p>
+				<?php echo $value['Blog']['description']; ?>
+				</p>
+              </blockquote>
+              <p><em><?php echo $value['Blog']['title']; ?></em></p>
+              
+            </div>
               </div>
+			  
 			  <?php  } ?>
     </section>
     <!-- END section -->

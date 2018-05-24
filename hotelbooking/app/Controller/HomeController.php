@@ -38,6 +38,31 @@ $this->loadModel('Testimonial');
 	
 	}
 public function contact() {
+	
+	$this->loadModel('Contact');
+    if ($this->request->isPost())
+    {
+     //   print_r($this->Contact);
+        if($this->Contact->save($this->request->data)){
+
+		
+            print_r($this->request->data);
+            $this->Session->setFlash('Contact information updated successfully', 'flash/sucess');
+            //$this->redirect(array('action'=>'index'));
+        }
+    }
+
+	}
+	
+	public function hotel() {
+
+	}
+	
+	
+	public function about() {
+
+	}
+	public function blog() {
 
 	}
 }
